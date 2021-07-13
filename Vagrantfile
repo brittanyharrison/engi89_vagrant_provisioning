@@ -17,6 +17,14 @@ Vagrant.configure("2") do |config|
   # to view default nginx page
    
     config.hostsupdater.aliases = ["development.local"]
-    # if the plugin is installed correctly and file is update with vagrant destroy then vagrant up
+    # if the plugin is installed correctly update with vagrant destroy then vagrant up
     # we should be able to see nginx page in the browser with http://development.local 
+
+    # Sync data from localhost/host machine to our VM
+    # vm home location path is: /home/vagrant/
+ #   ------------ "provision.sh", "/home/vagrant" ( for windows)
+ # ----------------"provision.sh"  "/home/ubuntu/" (for mac and Linux)
+ 	config.vm.synced_folder ".", "/home/vagrant/environment"
+ 	                 # localhost  location insdie the vm
+ 	# change made on OS                 
 end

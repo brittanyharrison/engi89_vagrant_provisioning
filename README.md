@@ -91,7 +91,17 @@ For help on any individual command run `vagrant COMMAND -h`
 
 https://github.com/agiledivider/vagrant-hostsupdater
 
+- Let's automate the tasks that we did manually earlier today
+- create a file called `provision.sh`
+- `sudo apt-get update -y`
+- `sudo apt-get upgrade -y`
+- `sudo apt-get install nginx`
+- `systemctl status nginx`
 
+-  To run provision.sh we need to give file permission and make this file executable
+- To change permission we use `chmod` with required permission then file name
+- `chmod +x provision.sh`
+- ./filename
 
 
 
